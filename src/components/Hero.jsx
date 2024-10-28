@@ -1,3 +1,6 @@
+import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
+
 function Hero() {
     return <div>Hero</div>;
 }
