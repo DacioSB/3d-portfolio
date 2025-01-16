@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF} from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Rooms = ({ isMobile }) => {
@@ -28,7 +28,7 @@ const Rooms = ({ isMobile }) => {
 
       <primitive
         object={room.scene}
-        scale={isMobile ? 0.005 : 0.005}
+        scale={isMobile ? 0.2 : 0.5}
         position={isMobile ? [0, -3, -2.2] : [0, -2.8, -0.5]}
         rotation={[0.1, -0.6, -0.1]}
       />
