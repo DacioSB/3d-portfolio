@@ -29,8 +29,8 @@ const Rooms = ({ isMobile }) => {
       <primitive
         object={room.scene}
         scale={isMobile ? 0.2 : 0.5}
-        position={isMobile ? [0, -3, -2.2] : [0, -2.8, -0.5]}
-        rotation={[0.1, -0.6, -0.1]}
+        position={isMobile ? [0, -1.5, -2.2] : [0, -1.8, -0.5]}
+        rotation={[0.2, -0.3, -0.1]}
       />
     </mesh>
   );
