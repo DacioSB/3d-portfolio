@@ -42,20 +42,28 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Full-Stack Developer",
       icon: web,
+      description:
+        "Experienced in developing end-to-end web applications using React, Next.js, .NET, and Java. I create scalable and maintainable front-end and back-end solutions with a strong focus on performance and user experience.",
     },
     {
-      title: "React Native Developer",
+      title: "Mobile Developer",
       icon: mobile,
+      description:
+        "Skilled in React Native and mobile development for large-scale applications. Developed critical features for Brazil’s digital work card, improving accessibility for millions of users.",
     },
     {
-      title: "Backend Developer",
+      title: "Backend & Cloud Engineer",
       icon: backend,
+      description:
+        "Proficient in building high-performance backend services and managing cloud infrastructures on AWS and Azure. Expertise in Java EE, Spring Boot, Node.js, and cloud orchestration with Kubernetes and Docker.",
     },
     {
-      title: "Content Creator",
+      title: "Data Engineer",
       icon: creator,
+      description:
+        "Strong background in data pipelines, real-time processing, and distributed systems using Kafka, Redis, Flink, and Spark. Built ETL solutions to integrate complex industrial and government data systems.",
     },
   ];
   

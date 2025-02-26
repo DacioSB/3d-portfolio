@@ -4,7 +4,7 @@ export const mode = "jit";
 export const theme = {
   extend: {
     colors: {
-      primary: "#050816",
+      primary: "#1f1049",
       secondary: "#aaa6c3",
       tertiary: "#151030",
       "black-100": "#100d25",
