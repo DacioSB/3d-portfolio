@@ -8,8 +8,20 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
+import java from "./tech/java.png";
+import spring from "./tech/spring.png";
+import csharp from "./tech/csharp.png";
+import aspnet from "./tech/aspnet.png";
+import nextjs from "./tech/next.png";
+import nest from "./tech/nest.svg";
+import kafka from "./tech/kafka.png";
+import kubernetes from "./tech/kubernetes.png";
+import terraform from "./tech/terraform.png";
+import aws from "./tech/aws.png";
+import azure from "./tech/azure.png";
+import jenkins from "./tech/jenkins.png";
+import python from "./tech/python.png";
 import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -39,9 +51,21 @@ export {
   close,
   css,
   docker,
-  figma,
   git,
   html,
+  java,
+  spring,
+  csharp,
+  aspnet,
+  nextjs,
+  nest,
+  kafka,
+  kubernetes,
+  terraform,
+  aws,
+  azure,
+  jenkins,
+  python,
   javascript,
   mongodb,
   nodejs,

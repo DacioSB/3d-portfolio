@@ -5,22 +5,31 @@ import {
     web,
     javascript,
     typescript,
-    html,
-    css,
+    java,
+    spring,
+    csharp,
+    aspnet,
+    nextjs,
+    nest,
+    kafka,
+    kubernetes,
+    terraform,
+    aws,
+    azure,
+    jenkins,
     reactjs,
     redux,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
+    python,
     docker,
     dataprev,
     senseup,
     carrent,
     jobit,
     tripguide,
-    threejs,
   } from "../assets";
   
   export const navLinks = [
@@ -67,57 +76,93 @@ import {
   
   const technologies = [
     {
-      name: "HTML 5",
-      icon: html,
+        name: "Java",
+        icon: java,
     },
     {
-      name: "CSS 3",
-      icon: css,
+        name: "Spring Boot",
+        icon: spring,
     },
     {
-      name: "JavaScript",
-      icon: javascript,
+        name: "C#",
+        icon: csharp,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
+        name: "ASP.NET",
+        icon: aspnet,
     },
     {
-      name: "React JS",
-      icon: reactjs,
+        name: "JavaScript",
+        icon: javascript,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+        name: "TypeScript",
+        icon: typescript,
     },
     {
-      name: "Tailwind CSS",
-      icon: tailwind,
+        name: "React JS",
+        icon: reactjs,
     },
     {
-      name: "Node JS",
-      icon: nodejs,
+        name: "Next.js",
+        icon: nextjs,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+        name: "NestJS",
+        icon: nest,
     },
     {
-      name: "Three JS",
-      icon: threejs,
+        name: "Node.js",
+        icon: nodejs,
     },
     {
-      name: "git",
-      icon: git,
+        name: "Redux Toolkit",
+        icon: redux,
     },
     {
-      name: "figma",
-      icon: figma,
+        name: "Tailwind CSS",
+        icon: tailwind,
     },
     {
-      name: "docker",
-      icon: docker,
+        name: "MongoDB",
+        icon: mongodb,
     },
+    {
+        name: "Kafka",
+        icon: kafka,
+    },
+    {
+        name: "Docker",
+        icon: docker,
+    },
+    {
+        name: "Kubernetes",
+        icon: kubernetes,
+    },
+    {
+        name: "Terraform",
+        icon: terraform,
+    },
+    {
+        name: "AWS",
+        icon: aws,
+    },
+    {
+        name: "Azure",
+        icon: azure,
+    },
+    {
+        name: "Git",
+        icon: git,
+    },
+    {
+        name: "Jenkins",
+        icon: jenkins,
+    },
+    {
+        name: "Python",
+        icon: python,
+    }
   ];
   
   const experiences = [
