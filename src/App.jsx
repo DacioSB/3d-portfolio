@@ -1,5 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Navbar, Hero, About, Experience } from "./components";
+
+import { default as WrappedWorks } from "./components/Works";
 import Tech from "./components/Tech";
 
 function App() {
@@ -13,8 +15,8 @@ function App() {
         <About />
         <Experience />
         <Tech />
-        {/* <Works />
-        <Feedbacks /> */}
+        <WrappedWorks />
+        {/* <Feedbacks /> */}
         <div className="relative z-0">
           {/* <Contact />
           <StarsCanvas /> */}
