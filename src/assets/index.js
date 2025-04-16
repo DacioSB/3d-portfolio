@@ -36,7 +36,7 @@ import threejs from "./tech/threejs.svg";
 import senseup from "./company/senseup.png";
 import dataprev from "./company/dtp.jpg";
 
-import carrent from "./carrent.png";
+import carrent from "./rentcars.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 

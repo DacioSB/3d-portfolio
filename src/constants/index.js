@@ -237,16 +237,20 @@ import {
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "redux",
           color: "green-text-gradient",
         },
         {
           name: "tailwind",
           color: "pink-text-gradient",
         },
+        {
+          name: "nestjs",
+          color: "yellow-text-gradient",
+        },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/DacioSB/react-rent-cars/",
     },
     {
       name: "Job IT",
