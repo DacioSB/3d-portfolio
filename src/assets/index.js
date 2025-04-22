@@ -37,8 +37,9 @@ import senseup from "./company/senseup.png";
 import dataprev from "./company/dtp.jpg";
 
 import carrent from "./rentcars.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import empregabilidade from "./empregabilidade.png";
+import kafkawikimedia from "./wikimedia-kafka.png";
+import twofactor from "./2-factor.png";
 
 export {
   logo,
@@ -77,6 +78,7 @@ export {
   senseup,
   dataprev,
   carrent,
-  jobit,
-  tripguide,
+  empregabilidade,
+  kafkawikimedia,
+  twofactor,
 };

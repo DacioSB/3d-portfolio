@@ -28,8 +28,9 @@ import {
     dataprev,
     senseup,
     carrent,
-    jobit,
-    tripguide,
+    empregabilidade,
+    kafkawikimedia,
+    twofactor,
   } from "../assets";
   
   export const navLinks = [
@@ -253,46 +254,93 @@ import {
       source_code_link: "https://github.com/DacioSB/react-rent-cars/",
     },
     {
-      name: "Job IT",
+      name: "Carteira de Trabalho Digital",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A digital platform that allows workers to view job vacancies available at the National Employment System (Sine) agencies and access various employment services offered by the Federal Government.",
       tags: [
         {
-          name: "react",
+          name: "react-native",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "gov-services",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "job-matching",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: empregabilidade, // Replace 'ctpsDigitalImage' with the actual image variable or URL
+      source_code_link: "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/janeiro/vagas-de-emprego-do-sine-podem-ser-visualizadas-na-carteira-de-trabalho-digital", // If there's a specific repository, replace with its URL
+    }
+  ,
+    {
+      name: "Kafka Wikimedia (By Conduktor)",
+      description:
+        "My final project for the Kafka course on Conduktor, where I implemented a Kafka-based Wikimedia project using Java and Kafka.",
+      tags: [
+        {
+          name: "java",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "kafka",
+          color: "green-text-gradient",
+        },
+        {
+          name: "streaming",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: kafkawikimedia,
+      source_code_link: "https://github.com/DacioSB/kafka-wikimedia-project",
     },
     {
-      name: "Trip Guide",
+      name: "End-to-End DevOps Project Pipeline",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "End-To-End DevOps project pipeline using Jenkins that automates the build, test, analysis, and deployment processes.",
       tags: [
         {
-          name: "nextjs",
+          name: "java",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "jenkins",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "docker",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*IabBUpRK5wv5_L1SKI-VDA.png",
+      source_code_link: "https://medium.com/@lowva96/end-to-end-devops-project-pipeline-6577f78bbeb7",
+    },
+    {
+      name: "2-Factor Authentication",
+      description:
+        "Theses days I was exploring some different challenges, so I step over a good one that I was always curious about the internal functioning: 2-Factor Authentication.",
+      tags: [
+        {
+          name: "architecture",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "csharp",
+          color: "green-text-gradient",
+        },
+        {
+          name: "react",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "yellow-text-gradient",
+        },
+      ],
+      image: twofactor,
+      source_code_link: "https://github.com/DacioSB/2-factor", //remember to change to medium article
     },
   ];
   
