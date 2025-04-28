@@ -31,6 +31,7 @@ import {
     empregabilidade,
     kafkawikimedia,
     twofactor,
+    contentgen,
   } from "../assets";
   
   export const navLinks = [
@@ -341,6 +342,73 @@ import {
       ],
       image: twofactor,
       source_code_link: "https://github.com/DacioSB/2-factor", //remember to change to medium article
+    },
+    {
+      name: "2-Factor Authentication",
+      description:
+        "A real-time currency rates dashboard built with .NET 8, Vue.js, and SQL Server, following Clean Architecture and DDD principles.",
+      tags: [
+        {
+          name: "architecture",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "csharp",
+          color: "green-text-gradient",
+        },
+        {
+          name: "cqrs",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "vuejs",
+          color: "yellow-text-gradient",
+        },
+      ],
+      image: "https://raw.githubusercontent.com/DacioSB/hahncurrencyrates/refs/heads/main/out/diagram/SystemContextDiagram.png",
+      source_code_link: "https://github.com/DacioSB/hahncurrencyrates"
+    },
+    {
+      name: "Optimizing Docker Images: A Before and After Analysis",
+      description:
+        "In this article, we’ll explore how to optimize a Dockerfile.",
+      tags: [
+        {
+          name: "devops",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "docker",
+          color: "green-text-gradient",
+        },
+      ],
+      image: "https://miro.medium.com/v2/resize:fit:4800/format:webp/0*2NBgILf1p5WsHpK6.png",
+      source_code_link: "https://github.com/DacioSB/optmizing-docker-images"
+    },
+    {
+      name: "AI Content-Gen Platform",
+      description:
+        "Generate and manage your AI-powered content with ease.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "csharp",
+          color: "green-text-gradient",
+        },
+        {
+          name: "gen-ai",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "clerk",
+          color: "yellow-text-gradient",
+        },
+      ],
+      image: contentgen,
+      source_code_link: "https://github.com/DacioSB/content-generator-frontend"
     },
   ];
   

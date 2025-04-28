@@ -110,5 +110,5 @@ const Works = () => {
   );
 };
 
-const WrappedWorks = SectionWrapper(Works, "");
+const WrappedWorks = SectionWrapper(Works, "work");
 export default WrappedWorks;

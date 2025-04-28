@@ -40,6 +40,7 @@ import carrent from "./rentcars.png";
 import empregabilidade from "./empregabilidade.png";
 import kafkawikimedia from "./wikimedia-kafka.png";
 import twofactor from "./2-factor.png";
+import contentgen from "./contentgen.png";
 
 export {
   logo,
@@ -81,4 +82,5 @@ export {
   empregabilidade,
   kafkawikimedia,
   twofactor,
+  contentgen,
 };

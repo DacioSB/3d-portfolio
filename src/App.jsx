@@ -1,7 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Navbar, Hero, About, Experience } from "./components";
-
-import { default as WrappedWorks } from "./components/Works";
+import { Navbar, Hero, About, Experience, Works } from "./components";
 import Tech from "./components/Tech";
 
 function App() {
@@ -15,7 +13,7 @@ function App() {
         <About />
         <Experience />
         <Tech />
-        <WrappedWorks />
+        <Works />
         {/* <Feedbacks /> */}
         <div className="relative z-0">
           {/* <Contact />
