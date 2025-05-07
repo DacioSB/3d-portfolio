@@ -32,6 +32,7 @@ import {
     kafkawikimedia,
     twofactor,
     contentgen,
+    wikimediakinesis,
   } from "../assets";
   
   export const navLinks = [
@@ -409,6 +410,27 @@ import {
       ],
       image: contentgen,
       source_code_link: "https://github.com/DacioSB/content-generator-frontend"
+    },
+    {
+      name: "Wikimedia Kinesis",
+      description:
+        "Real-Time Wikimedia changes using the Wikimedia EventStreams API and processes them with AWS Kinesis",
+      tags: [
+        {
+          name: "kinesis",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "aws",
+          color: "green-text-gradient",
+        },
+        {
+          name: "java",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: wikimediakinesis,
+      source_code_link: "https://github.com/DacioSB/wikimedia-kinesis-project/tree/main"
     },
   ];
   

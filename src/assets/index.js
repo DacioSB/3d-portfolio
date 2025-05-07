@@ -41,6 +41,7 @@ import empregabilidade from "./empregabilidade.png";
 import kafkawikimedia from "./wikimedia-kafka.png";
 import twofactor from "./2-factor.png";
 import contentgen from "./contentgen.png";
+import wikimediakinesis from "./wikimedia-kinesis.png"
 
 export {
   logo,
@@ -83,4 +84,5 @@ export {
   kafkawikimedia,
   twofactor,
   contentgen,
+  wikimediakinesis,
 };
