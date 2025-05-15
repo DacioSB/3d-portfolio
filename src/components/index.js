@@ -4,5 +4,6 @@ import About from "./About";
 import Experience from "./Experience";
 import ExperienceCard from "./ExperienceCard";
 import Works from "./Works";
+import Feedbacks from "./Feedbacks";
 
-export { Hero, Navbar, About, Experience, Works, ExperienceCard };
+export { Hero, Navbar, About, Experience, Works, ExperienceCard, Feedbacks };
