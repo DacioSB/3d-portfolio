@@ -33,6 +33,7 @@ import {
     twofactor,
     contentgen,
     wikimediakinesis,
+    doom,
   } from "../assets";
   
   export const navLinks = [
@@ -231,6 +232,31 @@ import {
   
   const projects = [
     {
+      name: "DOOM",
+      description:
+        "Zoom-like video conferencing application built using Next.js, TailwindCSS, and the Stream Video SDK.",
+      tags: [
+        {
+          name: "nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "clerk",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "streamio",
+          color: "yellow-text-gradient",
+        },
+      ],
+      image: doom,
+      source_code_link: "https://main.d15sxirypx1sis.amplifyapp.com/",
+    },
+    {
       name: "Car Rent",
       description:
         "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
@@ -345,7 +371,7 @@ import {
       source_code_link: "https://github.com/DacioSB/2-factor", //remember to change to medium article
     },
     {
-      name: "2-Factor Authentication",
+      name: "Hahn Currencies",
       description:
         "A real-time currency rates dashboard built with .NET 8, Vue.js, and SQL Server, following Clean Architecture and DDD principles.",
       tags: [
