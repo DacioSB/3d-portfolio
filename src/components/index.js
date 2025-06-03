@@ -6,5 +6,6 @@ import ExperienceCard from "./ExperienceCard";
 import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
+import StarsCanvas from "./canvas/Stars";
 
-export { Hero, Navbar, About, Experience, Works, ExperienceCard, Feedbacks, Contact };
+export { Hero, Navbar, About, Experience, Works, ExperienceCard, Feedbacks, Contact, StarsCanvas };

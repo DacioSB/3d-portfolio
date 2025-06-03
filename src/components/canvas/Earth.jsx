@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
@@ -8,8 +10,24 @@ const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
   return (
-    // eslint-disable-next-line react/no-unknown-property
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <>
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[2, 2, 5]} intensity={3} castShadow />
+      <directionalLight 
+        position={[-2, 0, -5]} 
+        intensity={1} 
+      />
+      <directionalLight 
+        position={[0, 5, 0]} 
+        intensity={1} 
+      />
+      
+      <hemisphereLight 
+        intensity={0.5} 
+        groundColor="black"
+      />
+      <primitive object={earth.scene} scale={1.5} position-y={0} rotation-y={0} />
+    </>
   );
 };
 
@@ -17,7 +35,7 @@ const EarthCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop='always'
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
