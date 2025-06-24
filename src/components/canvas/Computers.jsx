@@ -40,7 +40,7 @@ const RoomsCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
     setIsMobile(mediaQuery.matches);
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
@@ -54,13 +54,19 @@ const RoomsCanvas = () => {
   return (
     <Canvas
       frameloop="demand"
-      shadows
-      dpr={[1, 2]}
+      shadows={!isMobile} // Disable shadows on mobile
+      dpr={isMobile ? [1, 1.5] : [1, 2]} // Lower DPR on mobile
       camera={{
         position: [5, 5, 10],
-        fov: 35,
+        fov: isMobile ? 45 : 35, // Wider FOV on mobile
       }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ 
+        preserveDrawingBuffer: true,
+        antialias: !isMobile, // Disable antialiasing on mobile
+        alpha: true,
+        powerPreference: "high-performance"
+      }}
+      performance={{ min: 0.5 }} // Performance monitoring
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -68,6 +74,7 @@ const RoomsCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
           target={[0, 0, 0]}
+          enableDamping={!isMobile} // Disable damping on mobile
         />
         <Rooms isMobile={isMobile} />
       </Suspense>

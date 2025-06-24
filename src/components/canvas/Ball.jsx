@@ -44,11 +44,23 @@ const BallCanvas = ({ icon }) => {
   return (
     <Canvas
       frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={[1, 1.5]} // Reduced DPR for better performance
+      gl={{ 
+        preserveDrawingBuffer: true,
+        antialias: false, // Disable antialiasing for performance
+        alpha: true,
+        powerPreference: "high-performance"
+      }}
+      camera={{ position: [0, 0, 5], fov: 50 }}
+      performance={{ min: 0.5 }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls 
+          enableZoom={false} 
+          enablePan={false}
+          enableDamping={false} // Disable damping for performance
+          autoRotate={false} // Disable auto-rotate initially
+        />
         <Ball imgUrl={icon} />
       </Suspense>
 

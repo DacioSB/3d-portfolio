@@ -36,21 +36,29 @@ const EarthCanvas = () => {
     <Canvas
       shadows
       frameloop='always'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={[1, 1.5]} // Reduced DPR for better performance
+      gl={{ 
+        preserveDrawingBuffer: true,
+        antialias: false, // Disable antialiasing for performance
+        alpha: true,
+        powerPreference: "high-performance"
+      }}
       camera={{
         fov: 45,
         near: 0.1,
         far: 200,
         position: [-4, 3, 6],
       }}
+      performance={{ min: 0.5 }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
+          autoRotateSpeed={0.5} // Slower rotation for better performance
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enableDamping={false} // Disable damping for performance
         />
         <Earth />
 
