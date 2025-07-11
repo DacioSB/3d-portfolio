@@ -51,7 +51,7 @@ const BallCanvas = ({ icon }) => {
         alpha: true,
         powerPreference: "high-performance"
       }}
-      camera={{ position: [0, 0, 5], fov: 50 }}
+      camera={{ position: [0, 0, 5], fov: 75 }}
       performance={{ min: 0.5 }}
     >
       <Suspense fallback={<CanvasLoader />}>

@@ -5,7 +5,8 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-      <section className={`relative w-full h-screen mx-auto`}>
+      // Changed height for mobile to be shorter
+      <section className={`relative w-full h-[700px] sm:h-screen mx-auto`}>
           <div
               className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
           >
@@ -18,10 +19,11 @@ const Hero = () => {
                   <h1 className={`${styles.heroHeadText} text-white`}>
                       {"Hey there! I'm"} <span className="text-[#6141ac]">Dacio</span>
                   </h1>
+                  {/* Added a space to fix text wrapping on mobile */}
                   <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                      {"I'm a software developer"}
+                      {"I'm a software developer, "}
                       <br className="sm:block hidden" />
-                      I create web applications and intensive data systems
+                      {"I create web applications and intensive data systems"}
                   </p>
               </div>
           </div>

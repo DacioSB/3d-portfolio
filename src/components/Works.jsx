@@ -114,18 +114,13 @@ const Works = () => {
       </div>
 
       <div className="relative">
-        <div className='mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 w-full pb-24'>
+        <div className='mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 w-full pb-16'>
           {projects
             .map((project, index) => ({ ...project, index })) // preserve original index
             .slice(0, visibleProjects)
             .map(({ index, ...project }) => (
               <ProjectCard key={`project-${index}`} index={index} {...project} />
           ))}
-
-          {/* BLUR OVERLAY */}
-          {thereIsMoreToShow && (
-            <div className="absolute bottom-12 left-0 right-0 h-24 bg-gradient-to-t from-[#0f0f0f] to-transparent pointer-events-none blur-sm" />
-          )}
         </div>
       </div>
 

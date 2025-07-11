@@ -25,20 +25,40 @@ const Rooms = ({ isMobile }) => {
         intensity={0.5} 
         groundColor="black"
       />
-      <primitive object={room.scene} scale={0.5} position-y={0} rotation-y={0} />
+      <primitive 
+        object={room.scene} 
+        scale={isMobile ? 0.25 : 0.4} 
+        position-y={isMobile ? -1.0 : -1.8} // Adjusted for mobile
+        rotation-y={0}
+        rotation-x={0.1}
+      />
     </>
   );
 };
 
 const RoomsCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     <Canvas
       shadows
       frameloop='always'
-      dpr={[1, 1.5]} // Reduced DPR for better performance
+      dpr={[1, 1.5]}
       gl={{ 
         preserveDrawingBuffer: true,
-        antialias: false, // Disable antialiasing for performance
+        antialias: false,
         alpha: true,
         powerPreference: "high-performance"
       }}
@@ -53,14 +73,13 @@ const RoomsCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
-          autoRotateSpeed={0.5} // Slower rotation for better performance
+          autoRotateSpeed={0.5}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          enableDamping={false} // Disable damping for performance
+          enableDamping={false}
         />
-        <Rooms />
-
+        <Rooms isMobile={isMobile} />
         <Preload all />
       </Suspense>
     </Canvas>
