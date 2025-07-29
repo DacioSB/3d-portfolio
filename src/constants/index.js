@@ -206,27 +206,27 @@ import {
   const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+        "Dacio was an incredible mentor during my early career at SenseUp.",
+      name: "Jean Malavasu",
+      designation: "Software Developer",
+      company: "SenseUp",
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQFFlWpM_Tt2zg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719031804497?e=1756944000&v=beta&t=qCQrnWjhH3LaYJgM48SYv-DBBgxBd5N1Y8l35vUMY90",
     },
     {
       testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
+        "Working with Dacio on the Vale integration project was exceptional. His ability to translate technical challenges into business solutions made my job as PM much easier.",
+      name: "Samir Bravo",
+      designation: "Software Developer",
+      company: "Plusgrade",
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQE_QwDEK001PQ/profile-displayphoto-shrink_200_200/B4EZSG4kA_HMAY-/0/1737429762422?e=1756944000&v=beta&t=1f-UW2EGN1_ezBjlnyqoKHKzS5-S58srRwXpdg2aFZg",
     },
     {
       testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
+        "Starting at Dataprev together, I quickly realized Dacio's expertise in Java and React Native was invaluable. When we faced the emergency flood relief project, his leadership and technical skills helped us deliver a great solution.",
+      name: "Jefferson Valentim",
+      designation: "Software Engineer",
+      company: "Dataprev",
+      image: "https://media.licdn.com/dms/image/v2/C4D03AQHCQndvdu5s1g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1638104836370?e=1756944000&v=beta&t=IKtBGFqrUqa6y3cCSm7ys5Xw6cj0o8BLxGnbMKSpA4g",
     },
   ];
   
