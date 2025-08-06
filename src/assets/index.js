@@ -43,6 +43,7 @@ import twofactor from "./2-factor.png";
 import contentgen from "./contentgen.png";
 import wikimediakinesis from "./wikimedia-kinesis.png"
 import doom from "./doom.png";
+import todoGlobomantics from "./todo-globomantics.png";
 
 export {
   logo,
@@ -86,5 +87,6 @@ export {
   twofactor,
   contentgen,
   wikimediakinesis,
-  doom
+  doom,
+  todoGlobomantics
 };

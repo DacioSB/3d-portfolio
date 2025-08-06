@@ -34,6 +34,7 @@ import {
     contentgen,
     wikimediakinesis,
     doom,
+    todoGlobomantics
   } from "../assets";
   
   export const navLinks = [
@@ -207,7 +208,7 @@ import {
     {
       testimonial:
         "Dacio was an incredible mentor during my early career at SenseUp.",
-      name: "Jean Malavasu",
+      name: "Jean Malavasi",
       designation: "Software Developer",
       company: "SenseUp",
       image: "https://media.licdn.com/dms/image/v2/D4D03AQFFlWpM_Tt2zg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719031804497?e=1756944000&v=beta&t=qCQrnWjhH3LaYJgM48SYv-DBBgxBd5N1Y8l35vUMY90",
@@ -231,6 +232,31 @@ import {
   ];
   
   const projects = [
+    {
+      name: "Globomantics ToDo",
+      description:
+        "A modern MVVM bug tracking and feature management application built with Blazor Server, Entity Framework Core, and Azure Blob Storage integration.",
+      tags: [
+        {
+          name: "entity-framework",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "blazor",
+          color: "green-text-gradient",
+        },
+        {
+          name: "csharp",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "azure",
+          color: "yellow-text-gradient",
+        },
+      ],
+      image: todoGlobomantics,
+      source_code_link: "https://todo-drcph6h5fjb5h4hj.eastus-01.azurewebsites.net/todolist",
+    },
     {
       name: "DOOM",
       description:
