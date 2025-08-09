@@ -149,15 +149,17 @@ const Works = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} initial="hidden" animate="show">
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
-      <div className='w-full flex'>
+      <div className='w-full'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          initial="hidden"
+          animate="show"
         >
           Following projects showcase my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -171,6 +173,8 @@ const Works = () => {
       <motion.div 
         className="mt-10 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between"
         variants={fadeIn("up", "", 0.2, 1)}
+        initial="hidden"
+        animate="show"
       >
         <div className="flex items-center gap-3">
           {/* Filter Icon SVG */}
