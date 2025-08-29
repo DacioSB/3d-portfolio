@@ -54,7 +54,7 @@ const About = () => {
       >
         I&apos;m a Software Developer and Data Engineer with over five years of 
         experience in full-stack development and data-intensive applications. 
-        With expertise in Java, TypeScript, and Python, I have built scalable 
+        With expertise in Java, .NET, and Python, I have built scalable 
         solutions in industries ranging from government services to industrial 
         IoT. My work spans high-demand mobile applications, cloud infrastructure 
         management, and real-time data processing. Passionate about designing 

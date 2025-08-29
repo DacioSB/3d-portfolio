@@ -178,9 +178,9 @@ import {
       iconBg: "#383E56",
       date: "2020 - 2024",
       points: [
+        "Developed custom .NET solutions, including AWS Lambda and Azure Functions, to process legacy databases from partners and securely transfer data to the platform.",
         "Led the architecture and development of the Dataflow Provider, a key Go-based module that handled infrastructure provisioning across Kubernetes clusters, Docker environments, and standalone VMs.",
         "Built custom Node-RED plugins in TypeScript to extend the low-code platform, enabling seamless integration with external APIs, databases, and cloud services.",
-        "Developed custom .NET solutions, including AWS Lambda and Azure Functions, to process legacy databases from partners and securely transfer data to the platform.",
         "Implemented data processing pipelines using PySpark and Databricks on Azure, optimizing large-scale analytics and dashboard generation.",
         "Managed cloud infrastructure and DevOps tasks, automating deployments with Terraform, ensuring reliable Kafka message brokering, and optimizing data storage with Snowflake.",
         "Transitioned to a leadership role in the final year, mentoring team members and optimizing processes, achieving a 12% reduction in manual tasks and a 15% improvement in data integration efficiency."
