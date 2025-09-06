@@ -211,7 +211,7 @@ import {
       name: "Jean Malavasi",
       designation: "Software Developer",
       company: "SenseUp",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQFFlWpM_Tt2zg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719031804497?e=1756944000&v=beta&t=qCQrnWjhH3LaYJgM48SYv-DBBgxBd5N1Y8l35vUMY90",
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQFFlWpM_Tt2zg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718302882633?e=1759968000&v=beta&t=bPe8WlIlqV-ZRkiGy45RVxgeHUAF6w0KplgLFmOMsDI",
     },
     {
       testimonial:
@@ -219,7 +219,7 @@ import {
       name: "Samir Bravo",
       designation: "Software Developer",
       company: "Plusgrade",
-      image: "https://media.licdn.com/dms/image/v2/D4E03AQE_QwDEK001PQ/profile-displayphoto-shrink_200_200/B4EZSG4kA_HMAY-/0/1737429762422?e=1756944000&v=beta&t=1f-UW2EGN1_ezBjlnyqoKHKzS5-S58srRwXpdg2aFZg",
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQE_QwDEK001PQ/profile-displayphoto-shrink_800_800/B4EZSG4kA_HMAc-/0/1737429762440?e=1759968000&v=beta&t=Y9G3m7t2lYYKtyKApmMHnv0Vzko9DoodkImHehmq7x0",
     },
     {
       testimonial:
@@ -227,7 +227,7 @@ import {
       name: "Jefferson Valentim",
       designation: "Software Engineer",
       company: "Dataprev",
-      image: "https://media.licdn.com/dms/image/v2/C4D03AQHCQndvdu5s1g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1638104836370?e=1756944000&v=beta&t=IKtBGFqrUqa6y3cCSm7ys5Xw6cj0o8BLxGnbMKSpA4g",
+      image: "https://media.licdn.com/dms/image/v2/C4D03AQHCQndvdu5s1g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1638104836370?e=1759968000&v=beta&t=55jJZq7mTqA0hLFghl-5t6JSoM8fbbQkEx7co02iCDA",
     },
   ];
   
