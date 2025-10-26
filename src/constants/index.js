@@ -233,6 +233,27 @@ import {
   
   const projects = [
     {
+      name: "WebSockets: From Handshake to Hyperscale",
+      description:
+        "WebSockets represent a fundamental evolution in web communication. They implement a full-duplex, bi-directional protocol over a single, persistent TCP connection.",
+      tags: [
+        {
+          name: "javascript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "html",
+          color: "green-text-gradient",
+        },
+        {
+          name: "web",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*yODKIbOicjOZYi2iqpJ4uA.png",
+      source_code_link: "https://medium.com/@lowva96/websockets-from-handshake-to-hyperscale-bb9dbada0feb",
+    },
+    {
       name: "Globomantics ToDo",
       description:
         "A modern MVVM bug tracking and feature management application built with Blazor Server, Entity Framework Core, and Azure Blob Storage integration.",
