@@ -3,9 +3,9 @@ import Tilt from 'react-parallax-tilt';
 import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import PropTypes from "prop-types";
-import { github } from "../assets";
+import { github, medium, website } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { projects, ProjectPlatform } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
@@ -15,7 +15,19 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  platform,
 }) => {
+  const getPlatformIcon = () => {
+    switch (platform) {
+      case ProjectPlatform.GITHUB:
+        return github;
+      case ProjectPlatform.MEDIUM:
+        return medium;
+      default:
+        return website;
+    }
+  };
+
   return (
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.1, 0.75)}
@@ -46,7 +58,7 @@ const ProjectCard = ({
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform duration-200'
             >
               <img
-                src={github || "/placeholder.svg"}
+                src={getPlatformIcon() || "/placeholder.svg"}
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
               />
@@ -88,6 +100,7 @@ ProjectCard.propTypes = {
   ).isRequired,
   image: PropTypes.string.isRequired,
   source_code_link: PropTypes.string.isRequired,
+  platform: PropTypes.number.isRequired,
 };
 
 const Works = () => {

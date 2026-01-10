@@ -34,9 +34,15 @@ import {
     contentgen,
     wikimediakinesis,
     doom,
-    todoGlobomantics
+    todoGlobomantics,
   } from "../assets";
   
+  export const ProjectPlatform = {
+    GITHUB: 0,
+    MEDIUM: 1,
+    WEBSITE: 2,
+  };
+
   export const navLinks = [
     {
       id: "about",
@@ -197,7 +203,8 @@ import {
         "Developing backend services in Java and implementing multi-tenant support for a proprietary API Gateway in C#.",
         "Enhancing the React Native-based mobile application to improve usability and performance.",
         "Integrated five APIs for the Flood Relief Financial Aid project, enabling rapid eligibility verification and payment authorization for affected workers.",
-        "Collaborating with the AI department on an employability project, leveraging work card data to provide job recommendations, similar to LinkedIn but tailored to regional opportunities."
+        "Collaborating with the AI department on an employability project, leveraging work card data to provide job recommendations, similar to LinkedIn but tailored to regional opportunities.",
+        "Led the end-to-end (full-stack) development of the Unemployment Insurance solution for artisanal fishermen (Defeso), enabling digital application submission and benefit tracking through the official Work Card mobile app and Worker Portal. Built the React application, backend services integrating with unemployment insurance systems and Telebras, and the employer/community portal to support assisted submissions for illiterate or digitally underserved fishermen."
       ],
     },
   ];
@@ -252,6 +259,7 @@ import {
       ],
       image: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*yODKIbOicjOZYi2iqpJ4uA.png",
       source_code_link: "https://medium.com/@lowva96/websockets-from-handshake-to-hyperscale-bb9dbada0feb",
+      platform: ProjectPlatform.MEDIUM,
     },
     {
       name: "Globomantics ToDo",
@@ -277,6 +285,7 @@ import {
       ],
       image: todoGlobomantics,
       source_code_link: "https://todo-drcph6h5fjb5h4hj.eastus-01.azurewebsites.net/todolist",
+      platform: ProjectPlatform.WEBSITE,
     },
     {
       name: "DOOM",
@@ -302,6 +311,7 @@ import {
       ],
       image: doom,
       source_code_link: "https://main.d15sxirypx1sis.amplifyapp.com/",
+      platform: ProjectPlatform.WEBSITE,
     },
     {
       name: "Car Rent",
@@ -327,6 +337,7 @@ import {
       ],
       image: carrent,
       source_code_link: "https://github.com/DacioSB/react-rent-cars/",
+      platform: ProjectPlatform.GITHUB,
     },
     {
       name: "Carteira de Trabalho Digital",
@@ -348,6 +359,7 @@ import {
       ],
       image: empregabilidade, // Replace 'ctpsDigitalImage' with the actual image variable or URL
       source_code_link: "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/janeiro/vagas-de-emprego-do-sine-podem-ser-visualizadas-na-carteira-de-trabalho-digital", // If there's a specific repository, replace with its URL
+      platform: ProjectPlatform.WEBSITE,
     }
   ,
     {
@@ -370,6 +382,7 @@ import {
       ],
       image: kafkawikimedia,
       source_code_link: "https://github.com/DacioSB/kafka-wikimedia-project",
+      platform: ProjectPlatform.GITHUB,
     },
     {
       name: "End-to-End DevOps Project Pipeline",
@@ -391,6 +404,7 @@ import {
       ],
       image: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*IabBUpRK5wv5_L1SKI-VDA.png",
       source_code_link: "https://medium.com/@lowva96/end-to-end-devops-project-pipeline-6577f78bbeb7",
+      platform: ProjectPlatform.MEDIUM,
     },
     {
       name: "2-Factor Authentication",
@@ -416,6 +430,7 @@ import {
       ],
       image: twofactor,
       source_code_link: "https://github.com/DacioSB/2-factor", //remember to change to medium article
+      platform: ProjectPlatform.GITHUB,
     },
     {
       name: "Hahn Currencies",
@@ -440,7 +455,8 @@ import {
         },
       ],
       image: "https://raw.githubusercontent.com/DacioSB/hahncurrencyrates/refs/heads/main/out/diagram/SystemContextDiagram.png",
-      source_code_link: "https://github.com/DacioSB/hahncurrencyrates"
+      source_code_link: "https://github.com/DacioSB/hahncurrencyrates",
+      platform: ProjectPlatform.GITHUB,
     },
     {
       name: "Optimizing Docker Images: A Before and After Analysis",
@@ -457,7 +473,8 @@ import {
         },
       ],
       image: "https://miro.medium.com/v2/resize:fit:4800/format:webp/0*2NBgILf1p5WsHpK6.png",
-      source_code_link: "https://github.com/DacioSB/optmizing-docker-images"
+      source_code_link: "https://github.com/DacioSB/optmizing-docker-images",
+      platform: ProjectPlatform.GITHUB,
     },
     {
       name: "AI Content-Gen Platform",
@@ -482,7 +499,8 @@ import {
         },
       ],
       image: contentgen,
-      source_code_link: "https://github.com/DacioSB/content-generator-frontend"
+      source_code_link: "https://github.com/DacioSB/content-generator-frontend",
+      platform: ProjectPlatform.GITHUB,
     },
     {
       name: "Wikimedia Kinesis",
@@ -495,7 +513,7 @@ import {
         },
         {
           name: "aws",
-          color: "green-text-gradient",
+          color:"green-text-gradient",
         },
         {
           name: "java",
@@ -503,7 +521,8 @@ import {
         },
       ],
       image: wikimediakinesis,
-      source_code_link: "https://github.com/DacioSB/wikimedia-kinesis-project/tree/main"
+      source_code_link: "https://github.com/DacioSB/wikimedia-kinesis-project/tree/main",
+      platform: ProjectPlatform.GITHUB,
     },
   ];
   
