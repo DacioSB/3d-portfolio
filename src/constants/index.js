@@ -240,6 +240,56 @@ import {
   
   const projects = [
     {
+      name: "And now… AI is deciding what you pay",
+      description:
+        "You’re living in the future, and it turns out the future is a subscription service that knows exactly how desperate you are to buy.",
+      tags: [
+        {
+          name: "ai",
+          color: "sunset-text-gradient",
+        },
+      ],
+      image: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*HHw-9y-8QbIcf9DbPIIqwQ.png",
+      source_code_link: "https://medium.com/@lowva96/and-now-ai-is-deciding-what-you-pay-0f07c5ffb545",
+      platform: ProjectPlatform.MEDIUM,
+    },
+    {
+      name: "Music Recommender",
+      description:
+        "A hybrid approach for a music recommendation system based on spotify dataset.",
+      tags: [
+        {
+          name: "data-science",
+          color: "sunset-text-gradient",
+        },
+        {
+          name: "data-analysis",
+          color: "cyan-text-gradient",
+        },
+      ],
+      image: "https://opendatascience.com/wp-content/uploads/2018/12/kaggle.png",
+      source_code_link: "https://www.kaggle.com/code/docinho/music-recommender",
+      platform: ProjectPlatform.WEBSITE,
+    },
+    {
+      name: "The Math Behind the Magic: How the Normal Distribution Powers Modern Machine Learning",
+      description:
+        "From probability theory to production models — understanding the bell curve that makes AI decisions possible.",
+      tags: [
+        {
+          name: "data-science",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "python",
+          color: "green-text-gradient",
+        },
+      ],
+      image: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*xsC7zApLl9Fs_8ksBLsq9A.png",
+      source_code_link: "https://medium.com/@lowva96/the-math-behind-the-magic-how-the-normal-distribution-powers-modern-machine-learning-89af4a3de4b2",
+      platform: ProjectPlatform.MEDIUM,
+    },
+    {
       name: "WebSockets: From Handshake to Hyperscale",
       description:
         "WebSockets represent a fundamental evolution in web communication. They implement a full-duplex, bi-directional protocol over a single, persistent TCP connection.",

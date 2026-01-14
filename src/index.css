@@ -129,6 +129,55 @@
   -webkit-text-fill-color: transparent;
 }
 
+.purple-text-gradient {
+  background: #667eea; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #667eea,
+    #764ba2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #667eea,
+    #764ba2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyan-text-gradient {
+  background: #00cdac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #00cdac,
+    #8ddad5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #00cdac,
+    #8ddad5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sunset-text-gradient {
+  background: #fa709a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #fa709a,
+    #fee140
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #fa709a,
+    #fee140
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
