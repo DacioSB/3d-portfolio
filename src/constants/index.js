@@ -240,6 +240,28 @@ import {
   
   const projects = [
     {
+      name: "Build a Smart, Eco-Aware Routing App with Neo4j, Vue 3, OSM and Leaflet",
+      description:
+        "In this tutorial, we are going to build a custom, smart routing web application from scratch.",
+      tags: [
+        {
+          name: "neo4j",
+          color: "green-text-gradient",
+        },
+        {
+          name: "vuejs",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "python",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*dTS59xVMntt1Cqa6Sc_yyA.png",
+      source_code_link: "https://medium.com/@lowva96/build-a-smart-eco-aware-routing-app-with-neo4j-vue-3-osm-and-leaflet-391b193ab7ee",
+      platform: ProjectPlatform.MEDIUM,
+    },
+    {
       name: "WebSockets: From Handshake to Hyperscale",
       description:
         "WebSockets represent a fundamental evolution in web communication. They implement a full-duplex, bi-directional protocol over a single, persistent TCP connection.",
