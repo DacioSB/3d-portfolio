@@ -18,7 +18,7 @@ export const theme = {
       xs: "450px",
     },
     backgroundImage: {
-      "hero-pattern": "url('/src/assets/rm251-mind-15.jpg')",
+      "hero-pattern": "url('/src/assets/rm251-mind-15.webp')",
     },
   },
 };
