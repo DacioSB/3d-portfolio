@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 // Lazy load components for better performance
 const About = lazy(() => import("./components/About"));
