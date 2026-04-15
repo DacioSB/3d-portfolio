@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unknown-property */
 
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { useInView } from "react-intersection-observer";
 
 import CanvasLoader from "../Loader";
 
@@ -32,10 +33,30 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+
+  const {ref, inView} = useInView({
+    threshold: 0.1,
+    triggerOnce: false
+  });
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  },[]);
+
   return (
     <Canvas
       shadows
-      frameloop='always'
+      frameloop={isMobile ? "demand" : "always"}
       dpr={[1, 1.5]} // Reduced DPR for better performance
       gl={{ 
         preserveDrawingBuffer: true,
@@ -53,12 +74,12 @@ const EarthCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          autoRotate
-          autoRotateSpeed={0.5} // Slower rotation for better performance
+          autoRotate={!isMobile}
+          autoRotateSpeed={0.5}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          enableDamping={false} // Disable damping for performance
+          enableDamping={false}
         />
         <Earth />
 

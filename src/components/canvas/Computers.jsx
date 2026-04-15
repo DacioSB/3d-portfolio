@@ -54,7 +54,7 @@ const RoomsCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='always'
+      frameloop={isMobile ? "demand" : "always"}
       dpr={[1, 1.5]}
       gl={{ 
         preserveDrawingBuffer: true,
@@ -72,7 +72,7 @@ const RoomsCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          autoRotate
+          autoRotate={!isMobile}
           autoRotateSpeed={0.5}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
