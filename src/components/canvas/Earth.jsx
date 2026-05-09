@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unknown-property */
 
 import { Suspense } from "react";
+import { useInView } from "react-intersection-observer";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+
+import { useState, useEffect } from "react";
 
 import CanvasLoader from "../Loader";
 
@@ -32,39 +35,61 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
-  return (
-    <Canvas
-      shadows
-      frameloop='always'
-      dpr={[1, 1.5]} // Reduced DPR for better performance
-      gl={{ 
-        preserveDrawingBuffer: true,
-        antialias: false, // Disable antialiasing for performance
-        alpha: true,
-        powerPreference: "high-performance"
-      }}
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [-4, 3, 6],
-      }}
-      performance={{ min: 0.5 }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          autoRotateSpeed={0.5} // Slower rotation for better performance
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-          enableDamping={false} // Disable damping for performance
-        />
-        <Earth />
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // ADD THIS HOOK
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
 
-        <Preload all />
-      </Suspense>
-    </Canvas>
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  },[]);
+
+  return (
+    <div ref={ref} className="w-full h-full">
+      <Canvas
+        shadows
+        frameloop={!inView ? "never" : (isMobile ? "demand" : "always")}
+        dpr={[1, 1.5]} // Reduced DPR for better performance
+        gl={{ 
+          preserveDrawingBuffer: true,
+          antialias: false, // Disable antialiasing for performance
+          alpha: true,
+          powerPreference: "high-performance"
+        }}
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 200,
+          position: [-4, 3, 6],
+        }}
+        performance={{ min: 0.5 }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            autoRotate
+            autoRotateSpeed={0.5} // Slower rotation for better performance
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            enableDamping={false} // Disable damping for performance
+          />
+          <Earth />
+
+          <Preload all />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 };
 

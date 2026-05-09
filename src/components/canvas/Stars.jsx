@@ -2,6 +2,7 @@ import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
+import { useInView } from "react-intersection-observer";
 
 const Stars = (props) => {
   const ref = useRef();
@@ -29,9 +30,17 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0, // Trigger immediately when contact section appears
+  });
+
   return (
-    <div className='w-full h-auto absolute inset-0 z-[-1]'>
-      <Canvas camera={{ position: [0, 0, 1] }}>
+    <div ref={ref} className='w-full h-auto absolute inset-0 z-[-1]'>
+      <Canvas 
+        camera={{ position: [0, 0, 1] }}
+        frameloop={inView ? "always" : "never"}
+      >
         <Suspense fallback={null}>
           <Stars />
         </Suspense>

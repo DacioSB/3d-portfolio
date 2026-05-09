@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import { useInView } from "react-intersection-observer";
 
 const Rooms = ({ isMobile }) => {
   const room = useGLTF("./room/scene.glb");
@@ -39,6 +40,11 @@ const Rooms = ({ isMobile }) => {
 const RoomsCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: false
+  });
+
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches);
@@ -52,37 +58,39 @@ const RoomsCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      shadows
-      frameloop='always'
-      dpr={[1, 1.5]}
-      gl={{ 
-        preserveDrawingBuffer: true,
-        antialias: false,
-        alpha: true,
-        powerPreference: "high-performance"
-      }}
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [-4, 3, 6],
-      }}
-      performance={{ min: 0.5 }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          autoRotateSpeed={0.5}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-          enableDamping={false}
-        />
-        <Rooms isMobile={isMobile} />
-        <Preload all />
-      </Suspense>
-    </Canvas>
+    <div ref={ref} className="w-full h-full">
+      <Canvas
+        shadows
+        frameloop={!inView ? "never" : (isMobile ? "demand" : "always")}
+        dpr={[1, 1.5]}
+        gl={{ 
+          preserveDrawingBuffer: true,
+          antialias: false,
+          alpha: true,
+          powerPreference: "high-performance"
+        }}
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 200,
+          position: [-4, 3, 6],
+        }}
+        performance={{ min: 0.5 }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            autoRotate
+            autoRotateSpeed={0.5}
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            enableDamping={false}
+          />
+          <Rooms isMobile={isMobile} />
+          <Preload all />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 };
 
