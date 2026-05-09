@@ -35,7 +35,6 @@ const Earth = () => {
 const EarthCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   
-  // ADD THIS HOOK
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
