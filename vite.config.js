@@ -5,21 +5,20 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Enable code splitting
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // Separate Three.js and related libraries
-          'three': ['@react-three/fiber', '@react-three/drei'],
-          // Separate animation libraries
-          'animation': ['framer-motion'],
-          // Separate UI libraries
-          'ui': ['react-tilt', 'react-parallax-tilt', 'react-vertical-timeline-component'],
-          // Separate email functionality
-          'email': ['@emailjs/browser']
-        }
-      }
-    },
+    // rollupOptions: {
+    //   output: {
+    //     manualChunks: {
+    //       // Separate Three.js and related libraries
+    //       'three': ['@react-three/fiber', '@react-three/drei'],
+    //       // Separate animation libraries
+    //       'animation': ['framer-motion'],
+    //       // Separate UI libraries
+    //       'ui': ['react-tilt', 'react-parallax-tilt', 'react-vertical-timeline-component'],
+    //       // Separate email functionality
+    //       'email': ['@emailjs/browser']
+    //     }
+    //   }
+    // },
     // Enable minification
     minify: 'terser',
     terserOptions: {

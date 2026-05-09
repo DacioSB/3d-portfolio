@@ -1,11 +1,9 @@
 /* eslint-disable react/no-unknown-property */
 
-import { Suspense } from "react";
 import { useInView } from "react-intersection-observer";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
-import { useState, useEffect } from "react";
 
 import CanvasLoader from "../Loader";
 
