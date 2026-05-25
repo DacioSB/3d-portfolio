@@ -14,7 +14,7 @@ const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 // Loading component
 const SectionLoader = () => (
-  <div className="w-full h-64 flex items-center justify-center">
+  <div className="w-full min-h-[70vh] flex items-center justify-center">
     <div className="canvas-loader"></div>
   </div>
 );
